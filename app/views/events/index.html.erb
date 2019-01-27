@@ -1,5 +1,7 @@
 <header class="rl-header">
-  <%= link_to 'Rolê Local', home_path, class: 'branding' %>
+  <%= link_to home_path, class: 'branding' do %>
+    <%= image_tag('logo.svg') %>
+  <% end %>
   <h1 class="title">Eventos</h1>
 </header>
 

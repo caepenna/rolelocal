@@ -4688,3 +4688,169 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 6.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-27 14:58:54 -0200
+  
+RuntimeError (Cannot load `Rails.application.database_configuration`:
+Could not load database configuration. No such file - ["config/database.yml"]):
+  
+railties (5.1.6.1) lib/rails/application/configuration.rb:139:in `database_configuration'
+activerecord (5.1.6.1) lib/active_record/railtie.rb:121:in `block (2 levels) in <class:Railtie>'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:49:in `each'
+activesupport (5.1.6.1) lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+activerecord (5.1.6.1) lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+activerecord (5.1.6.1) lib/active_record/base.rb:25:in `<top (required)>'
+activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `block in require'
+activesupport (5.1.6.1) lib/active_support/dependencies.rb:258:in `load_dependency'
+activesupport (5.1.6.1) lib/active_support/dependencies.rb:292:in `require'
+activerecord (5.1.6.1) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-27 14:58:55 -0200
+  
+ActiveRecord::ConnectionNotEstablished (No connection pool with 'primary' found.):
+  
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:930:in `retrieve_connection'
+activerecord (5.1.6.1) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6.1) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6.1) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1819834023710307570)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToEvents (20190127160803)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.2ms)[0m  [1m[35mALTER TABLE "events" ADD "name" character varying[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190127160803"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPriceToEvents (20190127161404)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "events" ADD "price" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190127161404"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1819834023710307570)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-01-27 15:02:19 -0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/caepenna/Sites/rolelocal/app/views/home/index.html.erb:4: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/Users/caepenna/Sites/rolelocal/app/views/home/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/caepenna/Sites/rolelocal/app/views/home/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/home/index.html.erb:4: syntax error, unexpected keyword_end
+app/views/home/index.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/home/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2019-01-27 15:02:41 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (101.3ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `iamge_tag' for #<#<Class:0x007f966f25b158>:0x007f9670b1fb80>
+Did you mean?  image_tag
+               time_tag):
+    1: <header class="rl-header -large">
+    2:   <%= link_to home_path, class: 'branding' do %>
+    3:     <%= iamge_tag('logo.svg') %>
+    4:   <% end %>
+    5: </header>
+    6: 
+  
+app/views/home/index.html.erb:3:in `block in _app_views_home_index_html_erb___832187934463450932_70142056268840'
+app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb___832187934463450932_70142056268840'
+Started GET "/" for 127.0.0.1 at 2019-01-27 15:02:50 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (707.3ms)
+Completed 200 OK in 759ms (Views: 754.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-27 15:03:55 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 117ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+

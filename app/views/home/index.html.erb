@@ -1,5 +1,7 @@
 <header class="rl-header -large">
-  <%= link_to 'Rolê Local', home_path, class: 'branding' %>
+  <%= link_to home_path, class: 'branding' do %>
+    <%= image_tag('logo.svg') %>
+  <% end %>
 </header>
 
 <main class="rl-main">
