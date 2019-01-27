@@ -1,10 +1,3 @@
-=typography-sizes($fs: $font-size-base, $lh: $line-height-base, $fs-mu: $fs, $lh-mu: $lh)
-  font-size: $fs
-  line-height: $lh
-  +media-mediumup
-    font-size: $fs-mu
-    line-height: $lh-mu
-
 html
   font-variant-numeric: oldstyle-nums
   font-feature-settings: "liga1" on
@@ -23,17 +16,10 @@ blockquote,
 pre
   +typography-sizes($font-size-deci, $line-height-centi, $font-size-base, $line-height-base)
 
-.-text-small
-  +typography-sizes($font-size-milli, $line-height-milli, $font-size-centi)
-
-.-without-margin
-  margin-top: 0
-
 p > a, p > label a
   cursor: pointer
   color: $color-link
-  +underline(1px)
-  +underline-mask
+  text-decoration: underline
   &:hover
     opacity: 0.6
 
