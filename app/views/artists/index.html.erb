@@ -9,13 +9,13 @@
 
   <div class="rl-cards">
     <% @artists.each do |artist| %>
-    <a class="rl-card">
-      <img class="picture" src="<%= artist.profile_picture %>" alt="">
-      <div class="info">
-        <h4><%= artist.name %></h4>
-        <h6><%= artist.genre %></h6>
-      </div>
-    </a>
+      <a class="rl-card">
+        <img class="picture" src="<%= artist.profile_picture %>" alt="">
+        <div class="info">
+          <h4><%= artist.name %></h4>
+          <h6><%= artist.genre %></h6>
+        </div>
+      </a>
     <% end %>
   </div>
 

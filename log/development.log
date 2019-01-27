@@ -2472,3 +2472,11 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/artists" for 127.0.0.1 at 2019-01-27 11:55:11 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
