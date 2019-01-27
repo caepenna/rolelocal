@@ -1,0 +1,42 @@
+=container-width
+  padding-left: $space-centi
+  padding-right: $space-centi
+  +media-mediumup
+    padding-left: $space-deca
+    padding-right: $space-deca
+  +media-largeup
+    padding-left: $space-hecto
+    padding-right: $space-hecto
+  +media-hugeup
+    padding-left: $space-hecto
+    padding-right: $space-hecto
+
+=hover-3d
+  transition: all 0.2s
+  transform: translateY(0px)
+  box-shadow: 0 6px 18px rgba(#000, 0.07)
+
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 6px 32px rgba(#000, 0.1)
+
+=align-center
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=typography-sizes($fs: $font-size-base, $lh: $line-height-base, $fs-mu: $fs, $lh-mu: $lh)
+  font-size: $fs
+  line-height: $lh
+  +media-mediumup
+    font-size: $fs-mu
+    line-height: $lh-mu
+
+=placeholder
+  &::placeholder
+    @content
+
+=card-style
+  background-color: #fff
+  box-shadow: 0 4px 12px rgba($color-bx-gray-900, 0.2)
