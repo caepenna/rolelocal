@@ -1,0 +1,473 @@
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1819834023710307570)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtists (20190127001123)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying, "facebook_link" character varying, "intagram_link_string" character varying, "spotify_link" character varying, "donation_link" character varying, "hire_link" character varying, "genre" character varying, "profile_picture" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (13.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190127001123"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-27 00:22:01.873356"], ["updated_at", "2019-01-27 00:22:01.873356"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1819834023710307570)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:22:23 -0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$color-link".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:34
+app/assets/stylesheets/base:4
+app/assets/stylesheets/application.sass:21
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211133286740'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:23:06 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 10.2ms)
+
+
+  
+ActionView::Template::Error (Undefined mixin 'underline'.):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:35:in `underline'
+app/assets/stylesheets/base/_typography.sass:35
+app/assets/stylesheets/base:4
+app/assets/stylesheets/application.sass:21
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211156765420'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:23:38 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$color-selection".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_unclassed.sass:2
+app/assets/stylesheets/base:5
+app/assets/stylesheets/application.sass:21
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211141313840'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:23:53 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211181348560'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:24:59 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211181515520'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:25:01 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211133652560'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:25:15 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211173369920'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:25:52 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-size-deci".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:24:in `typography-sizes'
+app/assets/stylesheets/base/_typography.sass:24
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211128106420'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:10 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-size-deci".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:24:in `typography-sizes'
+app/assets/stylesheets/base/_typography.sass:24
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211147296220'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:11 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-size-deci".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:24:in `typography-sizes'
+app/assets/stylesheets/base/_typography.sass:24
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211157892180'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:16 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-size-deci".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:24:in `typography-sizes'
+app/assets/stylesheets/base/_typography.sass:24
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211142427720'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:21 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211181107580'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:32 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211173959800'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:36 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:11
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211142953500'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:26:58 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211130465780'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:27:50 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211173829040'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:28:00 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211180991240'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:30:12 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___177589512600579920_70211146823440'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:30:33 -0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2666357691414295595_70138716840800'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:30:54 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 11.0ms)
+
+
+  
+ActionView::Template::Error (Undefined mixin 'typography-sizes'.):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:17:in `typography-sizes'
+app/assets/stylesheets/base/_typography.sass:17
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2666357691414295595_70138710993460'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:31:21 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Undefined variable: "$font-family-body".):
+    4:     <title>Rolelocal</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/base/_typography.sass:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2666357691414295595_70138758300860'
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:31:50 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 516ms (Views: 513.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:32:00 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 129ms (Views: 124.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-26 22:32:57 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 100ms (Views: 96.2ms | ActiveRecord: 0.5ms)
+
+
