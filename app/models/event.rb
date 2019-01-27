@@ -12,4 +12,6 @@
 #
 
 class Event < ApplicationRecord
+  has_many :artist_has_events
+  has_many :artists, through: :artist_has_events
 end
