@@ -3939,3 +3939,75 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 425ms (Views: 409.3ms | ActiveRecord: 2.4ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1819834023710307570)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToEvents (20190127160803)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "events" ADD "name" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190127160803"]]
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1819834023710307570)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-01-27 14:10:26 -0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 167ms (Views: 151.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-27 14:10:30 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 42ms (Views: 29.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-27 14:10:59 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2019-01-27 14:10:59 -0200
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (116.2ms)
+  Rendered events/new.html.erb within layouts/application (118.4ms)
+Completed 200 OK in 151ms (Views: 137.7ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-27 14:12:17 -0200
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHIJAtBxOlhJ82I52dco8vlPPmiG93noVQLelEpzU4hT0qCPH7xjIUQPblluPIWAwyh2TrZe1OEhjApqcKYAbg==", "event"=>{"name"=>"Mamba Negra", "date"=>"20/12/2990", "location"=>"Guará II", "event_picture"=>"https://3.bp.blogspot.com/-dSl5zdqBk1o/VyYl2OWCIjI/AAAAAAAAAU0/eSTc0I49UHsz1uDHNCRymdhpKsxTU7olQCLcB/s1600/Mamba%2Bnegra%2B-%2BALPHACODERS.jpg", "buy_link"=>"https://3.bp.blogspot.com/-dSl5zdqBk1o/VyYl2OWCIjI/AAAAAAAAAU0/eSTc0I49UHsz1uDHNCRymdhpKsxTU7olQCLcB/s1600/Mamba%2Bnegra%2B-%2BALPHACODERS.jpg"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("date", "location", "event_picture", "buy_link", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["date", "20/12/2990"], ["location", "Guará II"], ["event_picture", "https://3.bp.blogspot.com/-dSl5zdqBk1o/VyYl2OWCIjI/AAAAAAAAAU0/eSTc0I49UHsz1uDHNCRymdhpKsxTU7olQCLcB/s1600/Mamba%2Bnegra%2B-%2BALPHACODERS.jpg"], ["buy_link", "https://3.bp.blogspot.com/-dSl5zdqBk1o/VyYl2OWCIjI/AAAAAAAAAU0/eSTc0I49UHsz1uDHNCRymdhpKsxTU7olQCLcB/s1600/Mamba%2Bnegra%2B-%2BALPHACODERS.jpg"], ["created_at", "2019-01-27 16:12:17.689828"], ["updated_at", "2019-01-27 16:12:17.689828"], ["name", "Mamba Negra"]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 35ms (ActiveRecord: 26.4ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2019-01-27 14:12:17 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 144ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-27 14:12:42 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
