@@ -2,28 +2,28 @@
   color: #fff
   display: flex
   flex-direction: row
-  background-color: $color-rl-primary
   align-items: center
-
-  =horizontal-padding
-    padding-right: $space-centi
-    padding-left: $space-centi
-    +media-mediumup
-      padding-right: $space-centi
-      padding-left: $space-centi
+  background-image: linear-gradient(to right, $color-rl-teal-500, $color-rl-chartreuse-500)
 
   > .branding
-    +horizontal-padding
-    background-color: $color-rl-primary
     text-align: center
     font-size: $font-size-deci
     font-weight: 700
     text-align: left
+    padding-right: $space-centi
+    padding-left: $space-centi
+    +media-mediumup
+      padding-right: $space-base
+      padding-left: $space-base
 
   > .title
-    +horizontal-padding
-    background-color: $color-rl-secondary
+    background-image: linear-gradient(to right, $color-rl-coral-500, $color-rl-orange-500)
     flex-grow: 1
     padding-top: $space-centi
     padding-bottom: $space-centi
     padding-bottom: $space-centi
+    padding-right: $space-centi
+    padding-left: $space-centi
+    +media-mediumup
+      padding-right: $space-deca
+      padding-left: $space-deca

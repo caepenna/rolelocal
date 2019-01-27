@@ -2,3 +2,18 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
+  padding-top: $space-base
+  padding-bottom: $space-base
+  justify-content: center
+  +media-mediumup
+    padding-top: $space-deca
+    padding-bottom: $space-deca
+
+  > *
+    margin-top: $space-deci
+    margin-bottom: $space-deci
+    +media-mediumdown
+      width: 100%
+    +media-mediumup
+      margin-right: $space-deci
+      margin-left: $space-deci

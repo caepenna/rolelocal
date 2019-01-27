@@ -1,9 +1,32 @@
 .rl-card
   background-color: #fff
-  box-shadow: 0 4px 12px rgba(#000, 0.2)
+  box-shadow: 0 8px 24px rgba($color-rl-cyan-900, 0.6)
+  color: hsl(0, 0, 10%)
+  border-radius: 1rem
+  display: flex
+  flex-direction: row
+  align-items: center
+
+  +media-mediumdown
+    padding-top: $space-deci
+    padding-bottom: $space-deci
+    padding-right: $space-deci
+    padding-left: $space-deci
+  +media-mediumup
+    padding-top: $space-deci
+    padding-bottom: $space-deci
+    padding-right: $space-base
+    padding-left: $space-base
+
+  > .info
+    +media-mediumup
+      width: calc(8vw + 8rem)
 
   > .picture
-      $size: 12rem
-      width: $size
-      height: $size
-      border-radius: 50%
+    $size: calc(8vw + 4rem)
+    width: $size
+    height: $size
+    border-radius: 50%
+    margin-right: $space-centi
+    +media-mediumup
+      margin-right: $space-deci

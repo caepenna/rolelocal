@@ -1,24 +1,23 @@
 <header class="rl-header">
   <a class="branding" href="#">Rolê Local</a>
-  <h1 class="title">Artists</h1>
+  <h1 class="title">Artistas</h1>
 </header>
 
 <main class="rl-main">
 
   <p id="notice"><%= notice %></p>
 
-  <ul class="rl-cards">
+  <div class="rl-cards">
     <% @artists.each do |artist| %>
-    <li class="rl-card">
-      <p><%= artist.name %></p>
-      <p><%= artist.genre %></p>
+    <a class="rl-card">
       <img class="picture" src="<%= artist.profile_picture %>" alt="">
-      <%= link_to 'Show', artist %>
-      <%= link_to 'Edit', edit_artist_path(artist) %>
-      <%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
+      <div class="info">
+        <h4><%= artist.name %></h4>
+        <h6><%= artist.genre %></h6>
+      </div>
+    </a>
     <% end %>
-  </ul>
+  </div>
 
   <%= link_to 'New Artist', new_artist_path %>
 
