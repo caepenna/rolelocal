@@ -1,13 +1,29 @@
 .rl-header
-  height: $space-header
   color: #fff
   display: flex
   flex-direction: row
-  color: transparent
+  background-color: $color-rl-primary
+  align-items: center
+
+  =horizontal-padding
+    padding-right: $space-centi
+    padding-left: $space-centi
+    +media-mediumup
+      padding-right: $space-centi
+      padding-left: $space-centi
 
   > .branding
-    background-color: gold
+    +horizontal-padding
+    background-color: $color-rl-primary
+    text-align: center
+    font-size: $font-size-deci
+    font-weight: 700
+    text-align: left
 
   > .title
-    background-color: pink
+    +horizontal-padding
+    background-color: $color-rl-secondary
     flex-grow: 1
+    padding-top: $space-centi
+    padding-bottom: $space-centi
+    padding-bottom: $space-centi
