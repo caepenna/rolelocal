@@ -9,16 +9,21 @@
 
   <img class="picture" src="<%= @event.event_picture %>" alt="">
 
-  <h2><%= @event.date %></h2>
-
   <div class="buttons" style="overflow: auto;">
     <%= link_to 'Ingressos', @event.buy_link, class: 'rl-button' %>
   </div>
+
+  <h2><%= @event.date %></h2>
 
   <h3><%= @event.location %></h3>
 
   <h3><%= @event.date %></h3>
 
-  <h4><%= link_to 'Página do Facebook', '' %></h4>
+  <p><%= link_to 'Página do Facebook', '' %></p>
+
+  <h4>Artistas que vão tocar nesse evento:</h4>
+  <h6>Artista 1</h6>
+  <h6>Artista 2</h6>
+  <h6>Artista 3</h6>
 
 </main>

@@ -9,19 +9,24 @@
 
   <img class="picture" src="<%= @artist.profile_picture %>" alt="">
 
-  <h2><%= @artist.name %></h2>
-
   <div class="buttons" style="overflow: auto;">
     <%= link_to 'Doar para o artista', @artist.donation_link, class: 'rl-button' %>
     <%= link_to 'Contratar o artista', @artist.hire_link, class: 'rl-button' %>
   </div>
 
+  <h2><%= @artist.name %></h2>
+
   <h3><%= @artist.genre %></h3>
 
-  <h4><%= link_to 'Página do Facebook', @artist.facebook_link %></h4>
+  <p><%= link_to 'Página do Facebook', @artist.facebook_link %></p>
 
-  <h4><%= link_to 'Página do Instagram', @artist.intagram_link_string %></h4>
+  <p><%= link_to 'Página do Instagram', @artist.intagram_link_string %></p>
 
-  <h4><%= link_to 'Página do Spotify', @artist.spotify_link %></h4>
+  <p><%= link_to 'Página do Spotify', @artist.spotify_link %></p>
+
+  <h4>Eventos em que o artista vai tocar:</h4>
+  <h6>Evento 1</h6>
+  <h6>Evento 2</h6>
+  <h6>Evento 3</h6>
 
 </main>
