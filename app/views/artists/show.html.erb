@@ -1,44 +1,27 @@
-<p id="notice"><%= notice %></p>
+<header class="rl-header">
+  <a class="branding" href="#">Rolê Local</a>
+  <h1 class="title"><%= link_to 'Artistas', artists_path %> › <%= @artist.name %></h1>
+</header>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<main class="rl-main">
 
-<p>
-  <strong>Facebook link:</strong>
-  <%= @artist.facebook_link %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Intagram link string:</strong>
-  <%= @artist.intagram_link_string %>
-</p>
+  <img class="picture" src="<%= @artist.profile_picture %>" alt="">
 
-<p>
-  <strong>Spotify link:</strong>
-  <%= @artist.spotify_link %>
-</p>
+  <h2><%= @artist.name %></h2>
 
-<p>
-  <strong>Donation link:</strong>
-  <%= @artist.donation_link %>
-</p>
+  <div class="buttons" style="overflow: auto;">
+    <%= link_to 'Doar para o artista', @artist.donation_link, class: 'rl-button' %>
+    <%= link_to 'Contratar o artista', @artist.hire_link, class: 'rl-button' %>
+  </div>
 
-<p>
-  <strong>Hire link:</strong>
-  <%= @artist.hire_link %>
-</p>
+  <h3><%= @artist.genre %></h3>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @artist.genre %>
-</p>
+  <h4><%= link_to 'Página do Facebook', @artist.facebook_link %></h4>
 
-<p>
-  <strong>Profile picture:</strong>
-  <%= @artist.profile_picture %>
-</p>
+  <h4><%= link_to 'Página do Instagram', @artist.intagram_link_string %></h4>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+  <h4><%= link_to 'Página do Spotify', @artist.spotify_link %></h4>
+
+</main>
