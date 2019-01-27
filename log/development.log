@@ -1345,3 +1345,27 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 437ms (Views: 410.7ms | ActiveRecord: 8.0ms)
 
 
+Started GET "/artists" for 127.0.0.1 at 2019-01-27 01:08:54 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 809ms (Views: 804.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-27 01:11:35 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 213ms (Views: 208.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-27 01:12:34 -0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 156ms (Views: 153.4ms | ActiveRecord: 0.4ms)
+
+
