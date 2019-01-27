@@ -4011,3 +4011,60 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1819834023710307570)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPriceToEvents (20190127161404)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "events" ADD "price" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190127161404"]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1819834023710307570)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/events/new" for 127.0.0.1 at 2019-01-27 14:15:33 -0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (10.3ms)
+  Rendered events/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 162ms (Views: 142.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2019-01-27 14:16:30 -0200
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o87TMc/7oLcmPhpRvH+csTI/kB9PzgKo2f2ziZhDHFuUSxxOUNllNnUm5BkRnYKAienu6+jvQkgAS2Q5CpXRRg==", "event"=>{"name"=>"Safadão da night", "date"=>"12/12/2019", "location"=>"Casa do Fred", "price"=>"R$ 5,00", "event_picture"=>"https://www.plantapronta.com.br/projetos/140/01.jpg", "buy_link"=>"https://www.plantapronta.com.br/projetos/140/01.jpg"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("date", "location", "event_picture", "buy_link", "created_at", "updated_at", "name", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["date", "12/12/2019"], ["location", "Casa do Fred"], ["event_picture", "https://www.plantapronta.com.br/projetos/140/01.jpg"], ["buy_link", "https://www.plantapronta.com.br/projetos/140/01.jpg"], ["created_at", "2019-01-27 16:16:30.333456"], ["updated_at", "2019-01-27 16:16:30.333456"], ["name", "Safadão da night"], ["price", "R$ 5,00"]]
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 46ms (ActiveRecord: 35.2ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2019-01-27 14:16:30 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2019-01-27 14:16:38 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2019-01-27 14:16:49 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+
+
