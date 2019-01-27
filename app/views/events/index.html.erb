@@ -9,14 +9,14 @@
 
   <div class="rl-cards">
     <% @events.each do |event| %>
-      <a class="rl-card">
+      <%= link_to 'event', class:'rl-card' do %>
         <img class="picture" src="<%= event.event_picture %>" alt="">
         <div class="info">
           <h4><%= artist.date %></h4>
           <h6><%= artist.date %></h6>
           <h6><%= artist.location %></h6>
         </div>
-      </a>
+      <% end %>
     <% end %>
   </div>
 
