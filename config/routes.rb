@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "artists#index"
+  root to: "home#index"
   resources :events
   resources :artists
   get '/home' => 'home#index'
